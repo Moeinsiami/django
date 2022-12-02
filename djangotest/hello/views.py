@@ -12,6 +12,6 @@ def javad(request):
     return HttpResponse('hello, javad')
 
 def greet(request, name):
-    return HttpResponse(f'hello, {name}')
+    return HttpResponse(f'hello, {name.capitalize()}')
 
 
