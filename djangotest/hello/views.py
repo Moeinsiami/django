@@ -3,15 +3,15 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return HttpResponse('Hello, world')
+    return render(request, 'hello/index.html')
 
 def mamad(request):
     return HttpResponse('hello, mamad')
 
 def javad(request):
-    return HttpResponse('hello, javad')
+    return HttpResponse('<h1 style=\"color:blue"> hello javad </h1>')
 
 def greet(request, name):
-    return HttpResponse(f'hello, {name.capitalize()}')
+    return render(request, 'hello/greet.html',)
 
 
